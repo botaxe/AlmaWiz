@@ -1,0 +1,13 @@
+<h2 class="page-header">Failed to submit form</h2>
+<div>Last form received:</div>
+<div>Name: <%= form.Name %></div>
+<div>Phone Number: <%= form.PhoneNumber %></div>
+<div>Description: <%= form.Description %></div>
+<br />
+<form action="/" method="POST">
+  <%- include('_form_fields') %>
+  <div>
+    <a href="/">Cancel</a>
+    <button type="submit">Submit</button>
+  </div>
+</form>

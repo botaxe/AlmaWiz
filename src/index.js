@@ -1,9 +1,16 @@
+const express = require("express");
+const router = express.Router();
 const createApp = require('./create-app');
 const config = require('./config');
 const routes = require('./routes');
 
+
+
+
 const app = createApp(config);
 routes(app);
+
+
 
 function logRoutes(port) {
   console.log('\n', 'Your routes:');
@@ -20,6 +27,7 @@ function logRoutes(port) {
     'Read more: https://www.twilio.com/docs/frontline/nodejs-demo-quickstart#configure-the-twilio-frontline-integration-service'
   );
 }  
+
 
 app.listen(config.port, () => {
   console.info(`Application started at http://localhost:${config.port}`);

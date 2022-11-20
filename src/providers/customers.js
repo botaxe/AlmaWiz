@@ -8,7 +8,11 @@
 //     {
 //         'whatsapp:+12345678': 'john@example.com'
 //     }
+const user = require('../routes/form');
 const customersToWorkersMap = {};
+
+console.log(user.newapicustomers);
+const customers = user.newapicustomers;
 
 // Customers list
 // Example:
@@ -32,8 +36,24 @@ const customersToWorkersMap = {};
 //   }
 // ]
 
-const customers = [];
-
+/* const customers = [{
+         customer_id: 98,
+         display_name: 'Bobby Shaftoe12',
+         channels: [
+             { type: 'email', value: 'bbobby@example.com' },
+             { type: 'sms', value: '+19194703794' },
+             { type: 'whatsapp', value: '' }
+         ],
+         links: [
+             { type: 'Facebook', value: 'https://facebook.com', display_name: 'Social Media Profile' }
+         ],
+         details:{
+             title: "Information",
+             content: "Status: Active" + "\n\n" + "Score: 100"
+         },
+         worker: 'harrytseng00@gmail.com'
+      }];
+ */
 const findWorkerForCustomer = async (customerNumber) => customersToWorkersMap[customerNumber];
 
 const findRandomWorker = async () => {
