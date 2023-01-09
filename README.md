@@ -1,3 +1,5 @@
+Using Node, Express, MongoDB and EJS for rendering, this simple web application is combined with opensource code from Twilio-demo-services to act as a text center. On submit of the web form, customer information is sent to a CRM Callback URL. When Frontline is up and ready, the app will make an API call to the CRM callback to fetch customer data allowing for "customers" and "workers" will be able to communicate with one another.
+
 # Frontline Integration Service Example
 
 This repository contains an example server-side web application that is required to use [Twilio Frontline](https://www.twilio.com/frontline).
